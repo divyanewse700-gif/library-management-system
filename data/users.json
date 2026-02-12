@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": "U001",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "phone": "123-456-7890",
+      "membershipType": "Student",
+      "membershipStartDate": "2025-01-15",
+      "membershipExpiryDate": "2026-01-14",
+      "borrowedBooks": [
+        {
+          "bookId": "B101",
+          "title": "The Great Gatsby",
+          "borrowDate": "2026-02-01",
+          "dueDate": "2026-02-15",
+          "returnDate": null
+        }
+      ],
+      "fineAmount": 0
+    },
+    {
+      "id": "U002",
+      "name": "David Miller",
+      "email": "david.miller@example.com",
+      "phone": "987-654-3210",
+      "membershipType": "Faculty",
+      "membershipStartDate": "2024-09-10",
+      "membershipExpiryDate": "2026-09-09",
+      "borrowedBooks": [
+        {
+          "bookId": "B205",
+          "title": "Clean Code",
+          "borrowDate": "2026-01-20",
+          "dueDate": "2026-02-03",
+          "returnDate": "2026-02-02"
+        },
+        {
+          "bookId": "B310",
+          "title": "Introduction to Algorithms",
+          "borrowDate": "2026-02-05",
+          "dueDate": "2026-02-19",
+          "returnDate": null
+        }
+      ],
+      "fineAmount": 5.50
+    },
+    {
+      "id": "U003",
+      "name": "Sophia Lee",
+      "email": "sophia.lee@example.com",
+      "phone": "555-123-7890",
+      "membershipType": "Public",
+      "membershipStartDate": "2025-06-01",
+      "membershipExpiryDate": "2026-05-31",
+      "borrowedBooks": [],
+      "fineAmount": 0
+    }
+  ]
+}
+

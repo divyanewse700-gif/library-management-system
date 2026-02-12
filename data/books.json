@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "name": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "price": "15.99",
+      "publisher": "Chilton Books"
+    },
+    {
+      "id": "2",
+      "name": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "price": "10.99",
+      "publisher": "George Allen & Unwin"
+    },
+    {
+      "id": "3",
+      "name": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "price": "9.99",
+      "publisher": "Secker & Warburg"
+    }
+  ]
+}
