@@ -1,25 +1,7 @@
 const express = require("express");
-// const { users } = require("./data/users.json");
+const {users} = require("../data/users.json");
 
-//importing routers
-const userRouter=require("./routes/users");
-const booksRouter=require("./routes/books");
-
-
-const app = express();
-
-const PORT = 8081;
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "Home Page :-)",
-  });
-})
-
-app.use("/users",userRouter);
-app.use("/books",booksRouter);
+const router = express.Router();
 
 /**
  * Route:/users
@@ -28,7 +10,7 @@ app.use("/books",booksRouter);
  * Access:Public
  * Parameters:None
  */
-app.get("/users", (req, res) => {
+router.get("/", (req, res) => {
   res.status(200).json({
     success: true,
     data: users,
@@ -42,7 +24,7 @@ app.get("/users", (req, res) => {
  * Access:Public
  * Parameters:id
  */
-app.get("/users/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
   const user = users.find((each) => each.id === id);
 
@@ -67,7 +49,7 @@ app.get("/users/:id", (req, res) => {
  * Parameters:NONE
  */
 
-app.post("/users", (req, res) => {
+router.post("/", (req, res) => {
   //req.body should have the following fields
   const {
     id,
@@ -128,7 +110,7 @@ app.post("/users", (req, res) => {
  * Access:Public
  * Parameters:ID
  */
-app.put("/users/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   const { id } = req.params;
   const { data } = req.body;
 
@@ -167,7 +149,7 @@ app.put("/users/:id", (req, res) => {
  * Access:Public
  * Parameters:ID
  */
-app.delete("/users/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   const { id } = req.params;
 
   const userIndex = users.findIndex((each) => each.id == id);
@@ -188,12 +170,24 @@ app.delete("/users/:id", (req, res) => {
   });
 });
 
+
+module.exports=router;
+
+
+
+
+
+
+
+
+
+
 // app.all('*',(req,res)=>{
 //     res.status(500).json({
 //         message:"Not Built Yet"
 //     })
 // })
 
-app.listen(PORT, () => {
-  console.log(`server is up and runing on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`server is up and runing on http://localhost:${PORT}`);
+// });
